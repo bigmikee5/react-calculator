@@ -45,6 +45,11 @@ function App() {
     setCal(value);
   };
 
+  const clear = () => {
+    setCal("");
+    setResult("");
+  };
+
   return (
     <div className="App">
       <div className="calculator">
@@ -59,6 +64,7 @@ function App() {
           <button onClick={() => updateCalc("+")}>+</button>
           <button onClick={() => updateCalc("-")}>-</button>
           <button onClick={deleteLast}>DEL</button>
+          <button onClick={clear}>Clear</button>
         </div>
 
         <div className="digits">
